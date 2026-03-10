@@ -7,23 +7,18 @@
     --main-duration: 0.3s;
 }
 /* end variable */
+
 /* Start Global Rules */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    /* margin: 0; */
 }
 html {
     scroll-behavior: smooth;
 }
 body {
     font-family: "Work Sans", sans-serif;
-}
-/* End Global Rules */
-
-.pairent {
-    background-color: #eee;
 }
 
 .container {
@@ -48,6 +43,7 @@ body {
     text-align: center;
     color: #797979;
 }
+
 @media (max-width: 767px) {
     .special-heading {
         font-size: 60px;
@@ -58,7 +54,6 @@ body {
 }
 
 /* small */
-
 @media (min-width: 768px) {
     .container {
         width: 750px;
@@ -66,7 +61,6 @@ body {
 }
 
 /* meduim */
-
 @media (min-width: 992px) {
     .container {
         width: 970px;
@@ -74,13 +68,11 @@ body {
 }
 
 /* large */
-
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
 }
-
 /* End Global Rules */
 
 /* Start header */
@@ -102,10 +94,6 @@ body {
     position: relative;
 }
 
-.header .links:hover .icon span:nth-child(2) {
-    width: 100%;
-}
-
 .header .links .icon {
     width: 30px;
     display: flex;
@@ -115,11 +103,13 @@ body {
 
 .header .links .icon span {
     background-color: black;
-    margin-bottom: 5px;
+    margin-bottom: 2.5px;
+    margin-top: 2.5px;
     height: 2px;
 }
 
-.header .links .icon span:first-child {
+.header .links .icon span:first-child,
+.header .links .icon span:last-child {
     width: 100%;
 }
 
@@ -128,19 +118,19 @@ body {
     transition: var(--main-duration);
 }
 
-.header .links .icon span:last-child {
+.header .links:hover .icon span:nth-child(2) {
     width: 100%;
 }
 
 .header .links ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
     background-color: #f2f2f2;
+    list-style: none;
     position: absolute;
     right: 0;
-    min-width: 200px;
+    margin: 0px;
+    padding: 0px;
     top: calc(100% + 15px);
+    min-width: 200px;
     display: none;
     z-index: 1;
 }
@@ -175,6 +165,7 @@ body {
     border-bottom: 1px solid #ddd;
 }
 /* End header */
+
 /* start lnding section */
 .landing {
     background-image: url(../images/mountain\ black&white.jpg);
